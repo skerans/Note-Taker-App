@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
+const path = require('path');
 const { readFromFile, writeToFile } = require('../helpers/fsUtils');
 
 router.get('/', async (req, res) => {
