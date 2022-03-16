@@ -31,6 +31,8 @@ This project is covered by MIT
 ## Live
 Can be found live at https://secret-taiga-58035.herokuapp.com/
 
+![screenshot of homepage](./Assets/screenshot-1.png)
+![screenshot of notes page](./Assets/screenshot-2.png)
 
 
 ## Questions
