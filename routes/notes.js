@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
     };
   }
 
-  await writeToFile(path.join(__dirname, '../db/db.json'), newNote)
+  await writeToFile(path.join(__dirname, '../db/db.json'), JSON.stringify(newNote))
 })
 
 
