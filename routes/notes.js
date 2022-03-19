@@ -5,7 +5,7 @@ const { readFromFile, writeToFile } = require('../helpers/fsUtils');
 
 router.get('/', async (req, res) => {
   const data = await readFromFile(path.join(__dirname, '../db/db.json'))
-  res.json(JSON.parse(data))
+  return res.json(JSON.parse(data))
 });
 
 router.post('/', async (req, res) => {
@@ -19,7 +19,8 @@ router.post('/', async (req, res) => {
     };
   }
 
-  await writeToFile(path.join(__dirname, '../db/db.json'), JSON.stringify(newNote))
+  const note = await writeToFile(path.join(__dirname, '../db/db.json'), JSON.stringify(newNote))
+  return res.json(note);
 })
 
 
